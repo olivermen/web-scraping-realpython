@@ -6,4 +6,6 @@ page = requests.get(URL)
 
 soup = BeautifulSoup(page.content, "html.parser")
 
-# print(page.text)    
+results = soup.find(id="ResultsContainer")
+
+print(results.prettify())    
